@@ -30,11 +30,4 @@ services:
     network_mode: host
     tty: True
     stdin_open: True
-    entrypoint:
-      - bash 
-      - -c
-    command: > 
-      "source /opt/ros/noetic/setup.bash &&
-      source /root/catkin_ws/devel/setup.bash &&
-      sleep 2 &&
-      roslaunch micebot_launch navigation.launch"
+    command: bash
