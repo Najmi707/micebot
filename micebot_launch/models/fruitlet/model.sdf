@@ -3,25 +3,28 @@
   <model name="fruitlet">
     <static>true</static>
     <link name="link">
-      <pose>0 0 1.4 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
+
+      <!-- Collision -->
       <collision name="collision">
         <geometry>
-          <box>
-            <size>5 5 5</size>
-          </box>
+          <mesh>
+            <uri>model://fruitlet/meshes/model.dae</uri>
+          </mesh>
         </geometry>
       </collision>
+
+      <!-- Visual -->
       <visual name="visual">
-        <cast_shadows>false</cast_shadows>
         <geometry>
-          <box>
-            <size>7.5 0.2 2.8</size>
-          </box>
+          <mesh>
+            <uri>model://fruitlet/meshes/model.dae</uri>
+          </mesh>
         </geometry>
         <material>
           <script>
             <uri>model://fruitlet/materials/textures</uri>
-            <name>vrc/fruitlet</name>
+            <name>fruitlet/fruitlet</name>
           </script>
         </material>
       </visual>
